@@ -26,7 +26,7 @@ def generate(
         ):
     dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32' or 'bfloat16' or 'float16'
     compile = False # use PyTorch 2.0 to compile the model to be faster
-    exec(open('configurator.py').read()) # overrides from command line or config file
+    #exec(open('configurator.py').read()) # overrides from command line or config file
     
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
