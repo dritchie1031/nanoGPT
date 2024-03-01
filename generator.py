@@ -92,4 +92,4 @@ def generate(
         with ctx:
             for k in range(num_samples):
                 y = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
-                ret_str += decode(y[0].tolist()) + '\n'
+                print(decode(y[0].tolist()))
